@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Bieredex">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDFk2bqqiaT7co_SuHGipqchauOvxwsPsA" />
+            android:value="AIzaSyCQqgRVlGbC7MmL2irglYrgzE0DXzc69Rc" />
         <activity android:name=".MainActivity">
 
             <intent-filter>

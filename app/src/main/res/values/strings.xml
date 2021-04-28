@@ -15,4 +15,7 @@
     <string name="ajout_reussi" type="id">Ajout réussi!</string>
     <string name="element_supprime">%s supprimé!</string>
     <string name="fill_out_all_fields">Veuillez remplir tous les champs!</string>
+    <string name="continue_text">Continuer</string>
+    <string name="permission_description">Bienvenue sur Bieredex. Pour utiliser l\'application nous avons besoin de la permission de localisation. Autrement, l\'application ne fonctionnera pas correctement. Si vous acceptez et voulez continuer, appuyez sur le bouton ci-dessous.</string>
+    <string name="permission_required">Permission Requise</string>
 </resources>

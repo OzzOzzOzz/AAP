@@ -56,17 +56,16 @@ class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMyLocationButton
         map.isMyLocationEnabled = true
         map.setOnMyLocationButtonClickListener(this)
         map.uiSettings.apply {
-            isZoomControlsEnabled = false
-            isZoomGesturesEnabled = false
+            isZoomControlsEnabled = true
+            isZoomGesturesEnabled = true
             isRotateGesturesEnabled = false
             isTiltGesturesEnabled = false
             isCompassEnabled = false
-            isScrollGesturesEnabled = false
+            isScrollGesturesEnabled = true
         }
     }
 
-    override fun onMyLocationButtonClick() = true
-
+    override fun onMyLocationButtonClick() = false
 
     override fun onPermissionsDenied(requestCode: Int, perms: List<String>) {
         if (EasyPermissions.somePermissionPermanentlyDenied(this, perms[0])) {
