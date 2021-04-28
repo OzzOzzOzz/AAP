@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name" translatable="false">Bieredex</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="mes_bieres">Mes Bieres</string>
+    <string name="carte">Carte</string>
+    <string name="no_data">Pas de donnée</string>
+    <string name="title">Titre</string>
+    <string name="description">Description</string>
+    <string name="search">Chercher</string>
+    <string name="sort_by">Tirer par</string>
+    <string name="add">Ajouter</string>
+    <string name="save">Sauvegarder</string>
+    <string name="delete">Supprimer</string>
+    <string name="cancel">Annuler</string>
+    <string name="ajout_reussi" type="id">Ajout réussi!</string>
+    <string name="element_supprime">%s supprimé!</string>
+    <string name="fill_out_all_fields">Veuillez remplir tous les champs!</string>
+</resources>
