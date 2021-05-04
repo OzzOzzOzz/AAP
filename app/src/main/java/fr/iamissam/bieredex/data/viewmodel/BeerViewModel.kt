@@ -1,4 +1,4 @@
-package fr.iamissam.bieredex.data.viewmodel
+    package fr.iamissam.bieredex.data.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

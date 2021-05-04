@@ -14,6 +14,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
         fun bind(beerData: BeerData) {
             binding.beerData = beerData
+            //binding.ivBeer.alpha = if (beerData.uri == null) 1f else 0f
             binding.executePendingBindings()
         }
         companion object {

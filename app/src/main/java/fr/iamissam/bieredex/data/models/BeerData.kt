@@ -1,5 +1,6 @@
 package fr.iamissam.bieredex.data.models
 
+import android.net.Uri
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,4 +12,5 @@ data class BeerData(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     var title: String,
+    var uri: String?
 ) : Parcelable

@@ -8,12 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.model.MarkerOptions
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
 import fr.iamissam.bieredex.R
@@ -21,6 +24,8 @@ import fr.iamissam.bieredex.databinding.FragmentMapBinding
 
 class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener,
     GoogleMap.OnMarkerClickListener, EasyPermissions.PermissionCallbacks {
+
+    private val mapViewModel: MapViewModel by viewModels()
 
     val PERMISSION_BACKGROUND_LOCATION_REQUEST_CODE = 2
 
@@ -63,6 +68,15 @@ class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMyLocationButton
             isCompassEnabled = false
             isScrollGesturesEnabled = true
         }
+        mapViewModel.markers.observe(viewLifecycleOwner, Observer {
+            it.forEach {
+                googleMap.addMarker(
+                    MarkerOptions()
+                        .position(it)
+                )
+            }
+        })
+        mapViewModel.fetchData()
     }
 
     override fun onMyLocationButtonClick() = false
