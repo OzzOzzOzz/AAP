@@ -12,5 +12,7 @@ data class BeerData(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     var title: String,
+    var description: String,
+    var price: String,
     var uri: String?
 ) : Parcelable

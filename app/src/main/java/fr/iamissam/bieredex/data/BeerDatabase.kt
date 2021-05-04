@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import fr.iamissam.bieredex.data.models.BeerData
 
-@Database(entities = [BeerData::class], version = 2, exportSchema = false)
+@Database(entities = [BeerData::class], version = 3, exportSchema = false)
 abstract class BeerDatabase : RoomDatabase() {
 
     abstract fun beerDao(): BeerDao

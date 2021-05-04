@@ -17,6 +17,7 @@ import fr.iamissam.bieredex.data.viewmodel.BeerViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
 import java.io.File
+import kotlin.math.round
 
 
 class AddFragment : Fragment() {
@@ -58,11 +59,15 @@ class AddFragment : Fragment() {
 
     private fun insertDataToDb() {
         val mTitle = title_et.text.toString()
+        val mDescription = description_et.text.toString()
+        val price = round(price_et.text.toString().toFloat() * 100) / 100
 
         if (mTitle.isNotEmpty()) {
             val newData = BeerData(
                 0,
                 mTitle,
+                mDescription,
+                price.toString() + "€",
                 uri?.toString()
             )
 

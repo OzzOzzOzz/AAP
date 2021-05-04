@@ -38,6 +38,7 @@ class ListFragment : Fragment() {
 
         beerViewModel.getAllData.observe(viewLifecycleOwner, Observer {
             adapter.setData(it)
+            binding.quantity.setText(resources.getString(R.string.bierre_goutee, it.size))
         })
 
 
