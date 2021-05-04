@@ -2,7 +2,7 @@
 <resources>
     <string name="mes_bieres">My Beers</string>
     <string name="carte">Map</string>
-    <string name="no_data">No Data</string>
+    <string name="no_data">No tasted beers.</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="search">Search</string>

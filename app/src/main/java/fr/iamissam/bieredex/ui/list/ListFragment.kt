@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -38,6 +39,7 @@ class ListFragment : Fragment() {
 
         beerViewModel.getAllData.observe(viewLifecycleOwner, Observer {
             adapter.setData(it)
+            binding.quantity.isVisible = it.isNotEmpty()
             binding.quantity.setText(resources.getString(R.string.bierre_goutee, it.size))
         })
 

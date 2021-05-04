@@ -2,6 +2,7 @@ package fr.iamissam.bieredex.ui.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import fr.iamissam.bieredex.data.models.BeerData
 import fr.iamissam.bieredex.databinding.RowLayoutBinding
@@ -14,8 +15,9 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
         fun bind(beerData: BeerData) {
             binding.beerData = beerData
-            //binding.ivBeer.alpha = if (beerData.uri == null) 1f else 0f
+            binding.ivBeer.background.alpha = if (beerData.uri == null) 255 else 0
             binding.executePendingBindings()
+            binding.descriptionTxt.isVisible = binding.descriptionTxt.toString().isNotEmpty()
         }
         companion object {
             fun from(parent: ViewGroup): MyViewHolder {

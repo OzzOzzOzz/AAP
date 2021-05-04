@@ -3,7 +3,7 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="mes_bieres">Mes Bieres</string>
     <string name="carte">Carte</string>
-    <string name="no_data">Pas de donnée</string>
+    <string name="no_data">Aucune bierres goutées</string>
     <string name="title">Titre</string>
     <string name="description">Description</string>
     <string name="search">Chercher</string>

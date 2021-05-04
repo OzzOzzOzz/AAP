@@ -37,12 +37,12 @@ class BindingAdapters {
         @BindingAdapter("android:fromUri")
         @JvmStatic
         fun fromUri(imageView: ImageView, uri: String?) {
+            imageView.background.alpha = 255
             uri?.let {
                 val fileUri = Uri.parse(uri)
                 imageView.setImageURI(fileUri)
                 imageView.background.alpha = 0
             }
-            imageView.background.alpha = 255
         }
     }
 
